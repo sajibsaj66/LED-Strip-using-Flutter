@@ -13,7 +13,7 @@ void snackBarMessage(BuildContext context, String message) {
 void main() =>
     runApp(MaterialApp(debugShowCheckedModeBanner: false, home: RemotePage()));
 
-// Entry-Page
+// Home Page
 class RemotePage extends StatefulWidget {
   @override
   _RemotePageState createState() => _RemotePageState();
