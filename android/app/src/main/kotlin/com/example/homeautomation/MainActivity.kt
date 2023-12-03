@@ -1,4 +1,4 @@
-package com.example.neopixelcontroler
+package com.example.homeautomation
 
 import io.flutter.embedding.android.FlutterActivity
 

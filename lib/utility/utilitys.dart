@@ -9,12 +9,10 @@ void snackBarMessage(BuildContext context, String message) {
   ));
 }
 
-void setColor(Color color, BuildContext context, String selectedDevice) async {
+void setStatus(BuildContext context, String selectedDevice, int value) async {
   try {
-    var res = await http.post("http://$selectedDevice/colour", body: {
-      "r": color.red.toString(),
-      "g": color.green.toString(),
-      "b": color.blue.toString()
+    var res = await http.post("http://$selectedDevice/status", body: {
+      "bulb": value.toString(),
     });
     if (res.statusCode != 200) {
       snackBarMessage(context, "Device Error setting color");

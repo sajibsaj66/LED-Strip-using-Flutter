@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:neopixelcontroler/widgets/colorchanger.dart';
-import 'package:neopixelcontroler/widgets/powerswitch.dart';
+import 'package:homeautomation/widgets/living_home/living_home_page.dart';
+import 'package:homeautomation/widgets/powerswitch.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void snackBarMessage(BuildContext context, String message) {
@@ -13,7 +13,7 @@ void snackBarMessage(BuildContext context, String message) {
 void main() =>
     runApp(MaterialApp(debugShowCheckedModeBanner: false, home: RemotePage()));
 
-// Home Page
+// Entry-Page
 class RemotePage extends StatefulWidget {
   @override
   _RemotePageState createState() => _RemotePageState();
@@ -204,7 +204,7 @@ class _RemotePageState extends State<RemotePage> {
     return Theme(
       data: ThemeData.dark(),
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           actions: [
             Center(child: deviceDropDown()),
@@ -225,23 +225,13 @@ class _RemotePageState extends State<RemotePage> {
           ],
           elevation: 0,
           title: Text(
-            "RGB-Stripe",
+            "LIGHT BULB",
             style: TextStyle(color: Colors.amber),
           ),
           backgroundColor: Colors.black,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            PowerSwitch(
-              selectedDevice: selectedDevice,
-            ),
-            ColorChanger(
-              color: Colors.teal,
-              selectedDevice: selectedDevice,
-            ),
-          ],
+        body: LivingHomePage(
+          selectedDevice: selectedDevice,
         ),
       ),
     );
