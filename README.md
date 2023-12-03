@@ -2,10 +2,7 @@
 
 
 
-<img src="/screenshots/circuitdigram.png" Height="400" >
-<img src="/screenshots/appui.jpg" Height="400" >
-full vide turorial on youtube link below
-https://youtu.be/-hHqX76uYnQ
+
 A new Flutter project.
 
 ## Getting Started
